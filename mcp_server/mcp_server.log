@@ -1,0 +1,75 @@
+2025-12-02 17:10:14,769 - __main__ - WARNING - RAG_API_KEY not set - RAG features may not work
+2025-12-02 17:10:15,348 - __main__ - INFO - Database connection established
+2025-12-02 17:10:15,349 - __main__ - INFO - MCP Server starting...
+2025-12-02 17:10:15,369 - __main__ - ERROR - Server error: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-02 17:10:15,370 - __main__ - INFO - Database connection closed
+2025-12-02 17:10:15,370 - __main__ - INFO - MCP Server stopped
+2025-12-02 17:10:20,674 - __main__ - WARNING - RAG_API_KEY not set - RAG features may not work
+2025-12-02 17:10:21,025 - __main__ - INFO - Database connection established
+2025-12-02 17:10:21,025 - __main__ - INFO - MCP Server starting...
+2025-12-02 17:10:21,050 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-12-02 17:13:32,232 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:13:42,308 - __main__ - ERROR - List documents failed: HTTPSConnectionPool(host='contextual-ai-cw79.onrender.com', port=443): Read timed out. (read timeout=10)
+2025-12-02 17:13:42,309 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:13:42.309634", "tool": "list_documents", "arguments": {}, "success": false, "error": "Failed to list documents: HTTPSConnectionPool(host='contextual-ai-cw79.onrender.com', port=443): Read timed out. (read timeout=10)", "result_preview": null}
+2025-12-02 17:13:42,309 - __main__ - ERROR - Error executing list_documents: Failed to list documents: HTTPSConnectionPool(host='contextual-ai-cw79.onrender.com', port=443): Read timed out. (read timeout=10)
+2025-12-02 17:14:43,941 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:14:44,142 - __main__ - ERROR - List documents failed: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/documents
+2025-12-02 17:14:44,142 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:14:44.142378", "tool": "list_documents", "arguments": {}, "success": false, "error": "Failed to list documents: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/documents", "result_preview": null}
+2025-12-02 17:14:44,142 - __main__ - ERROR - Error executing list_documents: Failed to list documents: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/documents
+2025-12-02 17:16:14,280 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:16:14,354 - __main__ - ERROR - Query execution failed: relation "documents" does not exist
+LINE 1: SELECT * FROM documents LIMIT 50
+                      ^
+
+2025-12-02 17:16:14,355 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:16:14.355060", "tool": "get_documents_from_db", "arguments": {"limit": 50}, "success": false, "error": "relation \"documents\" does not exist\nLINE 1: SELECT * FROM documents LIMIT 50\n                      ^\n", "result_preview": null}
+2025-12-02 17:16:14,355 - __main__ - ERROR - Error executing get_documents_from_db: relation "documents" does not exist
+LINE 1: SELECT * FROM documents LIMIT 50
+                      ^
+
+2025-12-02 17:16:32,471 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:16:32,519 - __main__ - ERROR - Query execution failed: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:16:32,519 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:16:32.519608", "tool": "query_database", "arguments": {"query": "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"}, "success": false, "error": "current transaction is aborted, commands ignored until end of transaction block\n", "result_preview": null}
+2025-12-02 17:16:32,519 - __main__ - ERROR - Error executing query_database: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:17:32,942 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:17:33,008 - __main__ - ERROR - Query execution failed: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:17:33,008 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:17:33.008814", "tool": "query_database", "arguments": {"query": "SELECT version()"}, "success": false, "error": "current transaction is aborted, commands ignored until end of transaction block\n", "result_preview": null}
+2025-12-02 17:17:33,008 - __main__ - ERROR - Error executing query_database: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:18:15,526 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:18:15,557 - __main__ - ERROR - Query execution failed: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:18:15,558 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:18:15.558149", "tool": "query_database", "arguments": {"query": "SELECT 1"}, "success": false, "error": "current transaction is aborted, commands ignored until end of transaction block\n", "result_preview": null}
+2025-12-02 17:18:15,558 - __main__ - ERROR - Error executing query_database: current transaction is aborted, commands ignored until end of transaction block
+
+2025-12-02 17:20:32,381 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:20:32,391 - __main__ - ERROR - Query execution failed: SSL connection has been closed unexpectedly
+
+2025-12-02 17:20:32,391 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:20:32.391216", "tool": "query_database", "arguments": {"query": "SELECT current_database(), current_user"}, "success": false, "error": "SSL connection has been closed unexpectedly\n", "result_preview": null}
+2025-12-02 17:20:32,391 - __main__ - ERROR - Error executing query_database: SSL connection has been closed unexpectedly
+
+2025-12-02 17:20:39,012 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:20:39,474 - __main__ - INFO - Database connection established
+2025-12-02 17:20:39,539 - __main__ - INFO - Query executed: SELECT 1 as test... | Rows: 1
+2025-12-02 17:20:39,539 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:20:39.539724", "tool": "query_database", "arguments": {"query": "SELECT 1 as test"}, "success": true, "error": null, "result_preview": "Query executed successfully. Found 1 rows.\n\n\n--- Record 1 ---\ntest: 1"}
+2025-12-02 17:20:58,059 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:20:58,101 - __main__ - INFO - Query executed: SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name... | Rows: 2
+2025-12-02 17:20:58,101 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:20:58.101860", "tool": "query_database", "arguments": {"query": "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name"}, "success": true, "error": null, "result_preview": "Query executed successfully. Found 2 rows.\n\n\n--- Record 1 ---\ntable_name: document_chunk\n\n--- Record 2 ---\ntable_name: document_vectors"}
+2025-12-02 17:22:19,148 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:22:19,216 - __main__ - INFO - Query executed: SELECT current_database()... | Rows: 1
+2025-12-02 17:22:19,216 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:22:19.216703", "tool": "query_database", "arguments": {"query": "SELECT current_database()"}, "success": true, "error": null, "result_preview": "Query executed successfully. Found 1 rows.\n\n\n--- Record 1 ---\ncurrent_database: pdf_ingest"}
+2025-12-02 17:23:05,626 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:23:05,690 - __main__ - INFO - Query executed: SELECT column_name, data_type, character_maximum_length, is_nullable, column_default FROM informatio... | Rows: 6
+2025-12-02 17:23:05,691 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:23:05.691068", "tool": "query_database", "arguments": {"query": "SELECT column_name, data_type, character_maximum_length, is_nullable, column_default FROM information_schema.columns WHERE table_name = 'document_chunk' ORDER BY ordinal_position"}, "success": true, "error": null, "result_preview": "Query executed successfully. Found 6 rows.\n\n\n--- Record 1 ---\ncolumn_name: id\ndata_type: integer\ncharacter_maximum_length: None\nis_nullable: NO\ncolumn_default: nextval('document_chunk_id_seq'::regclas"}
+2025-12-02 17:23:26,520 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:23:26,564 - __main__ - INFO - Query executed: SELECT DISTINCT doc_name FROM document_chunk ORDER BY doc_name... | Rows: 6
+2025-12-02 17:23:26,565 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:23:26.565124", "tool": "query_database", "arguments": {"query": "SELECT DISTINCT doc_name FROM document_chunk ORDER BY doc_name"}, "success": true, "error": null, "result_preview": "Query executed successfully. Found 6 rows.\n\n\n--- Record 1 ---\ndoc_name: 1099_stocks.pdf\n\n--- Record 2 ---\ndoc_name: 591df7e2-3096-4674-bd67-bb1048742ba5.pdf\n\n--- Record 3 ---\ndoc_name: 968812_NoticeOf"}
+2025-12-02 17:24:10,794 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:24:11,007 - __main__ - ERROR - RAG API request failed: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/ask
+2025-12-02 17:24:11,008 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:24:11.008020", "tool": "ask_rag", "arguments": {"question": "What is Naval Ravikant's philosophy? Give me the main themes and principles he discusses.", "document_id": "Eric-Jorgenson_The-Almanack-of-Naval-Ravikant_Final.pdf"}, "success": false, "error": "RAG API error: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/ask", "result_preview": null}
+2025-12-02 17:24:11,008 - __main__ - ERROR - Error executing ask_rag: RAG API error: 404 Client Error: Not Found for url: https://contextual-ai-cw79.onrender.com/api/ask
+2025-12-02 17:27:20,099 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-12-02 17:27:32,967 - __main__ - INFO - External API called: POST https://contextual-ai-cw79.onrender.com/query | Status: 200
+2025-12-02 17:27:32,971 - __main__ - INFO - Tool used: {"timestamp": "2025-12-02T17:27:32.971292", "tool": "call_external_api", "arguments": {"url": "https://contextual-ai-cw79.onrender.com/query", "method": "POST", "json_data": {"question": "What is Naval Ravikant's philosophy? Give me the main themes and principles he discusses.", "document_id": "Eric-Jorgenson_The-Almanack-of-Naval-Ravikant_Final.pdf"}}, "success": true, "error": null, "result_preview": "API call successful!\n\nResponse:\n{\n  \"query\": \"What is Naval Ravikant's philosophy? Give me the main themes and principles he discusses.\",\n  \"answer\": \"Based on the provided context, Naval Ravikant's p"}
