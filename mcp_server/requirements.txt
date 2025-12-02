@@ -1,0 +1,30 @@
+# MCP Core
+mcp>=1.0.0
+
+# Database
+psycopg2-binary>=2.9.9
+sqlalchemy>=2.0.0  # Optional: ORM for more complex DB operations
+
+# HTTP Requests
+requests>=2.31.0
+httpx>=0.25.0  # Optional: async HTTP client (better for async operations)
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Async Support
+asyncio>=3.4.3
+
+# Utilities
+python-dateutil>=2.8.2  # Date/time parsing
+pydantic>=2.5.0  # Data validation (optional but helpful)
+
+# Logging (enhanced)
+colorlog>=6.8.0  # Colored console logs (optional, makes debugging easier)
+
+# Security
+cryptography>=41.0.0  # If you need to encrypt sensitive data
+
+# Testing (optional, for development)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
