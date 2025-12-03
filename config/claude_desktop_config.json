@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "rag-db-server": {
+      "command": "/Users/yash/PycharmProjects/mcp_contextual_ai/venv/bin/python3",
+      "args": [
+        "/Users/yash/PycharmProjects/mcp_contextual_ai/mcp_runner.py"
+      ],
+      "env": {
+        "DATABASE_URL": "postgresql://yash1thsa:81LTYIIV6rFQ2Jj2FIn1PGeOTAomObKH@dpg-d4banuvdiees73af02r0-a.ohio-postgres.render.com/pdf_ingest",
+        "RAG_API_URL": "https://contextual-ai-cw79.onrender.com/",
+        "RAG_API_KEY": "your-api-key-here"
+      }
+    }
+  }
+}
